@@ -1,0 +1,176 @@
+﻿.header {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 13px 10px;
+    background: linear-gradient(to left, rgba(60, 67, 223, 1), rgba(97, 18, 176, 1));
+
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    
+    &__leftElements {
+        display: flex;
+        align-items: center;
+
+        &--nav {
+            display: none;
+
+            @media screen and (min-width:1440px) {
+                display: block;
+            }
+        }
+        &--nav a {
+            text-decoration: none;
+
+            font-family: $WorkSans;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 22px;
+            letter-spacing: 0em;
+            text-align: right;
+
+            color: white;
+
+            margin: 0;
+            padding: 16px 23px 16px 43px;
+
+            & span {
+                padding-top: 2px;
+            }
+        }
+        &--nav a:hover {
+            background: $whitePurple;
+        }
+    }
+    &__rightElements {
+        display: flex;
+        align-items: center;
+    }
+
+    @media screen and (min-width:768px) {
+        padding: 0 30px;
+    }
+}
+
+.logo {
+    margin: 13px 42px 13px 0;
+    @media screen and (min-width:768px) {
+        margin: 18px 42px 18px 0;
+    }
+}
+
+.myBets {
+    position: relative;
+    background: black;
+    margin-right: 63px; //Было 38px
+    padding: 9px 112px 7px 35px;
+    border-radius: 8px;
+    display: none;
+
+    & span:nth-child(1) {
+        position: relative;
+
+        font-family: $WorkSans;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 18px;
+        letter-spacing: 0px;
+        text-align: left;
+
+        &::after {
+            position: absolute;
+            top: 50%;
+            left: -18px;
+            transform: translateY(-50%);
+            content: url(../img/wallet.svg);
+        }
+    }
+    &::before {
+        position: absolute;
+        top: 50%;
+        right: -8px;
+        transform: translateY(-50%);
+        content: 'My Bets';
+
+        font-family: $WorkSans;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 18px;
+        letter-spacing: 0px;
+        text-align: left;
+
+        padding: 8px 19px 8px 39px;
+
+        color: black;
+        background: white;
+        border-radius: 8px;
+
+    }
+    &::after {
+        position: absolute;
+        top: 50%;
+        right: 67px;
+        transform: translateY(-50%);
+        content: url(../img/tiket.svg);
+        
+    }
+
+    @media screen and(min-width:768px) {
+        display: flex;
+    }
+}
+
+.account_info {
+    position: relative;
+    background: black;
+
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    border-radius: 8px;
+
+    padding: 1px 26px 1px 12px;
+    margin-right: 47px;
+
+    &::after {
+        position: absolute;
+        top: 50%;
+        left: 80px;
+        transform: translateY(-50%);
+        content: url(../img/Avatar_account.svg);
+        padding: 5px;
+
+        background: white;
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+        border-radius: 50%;
+    }
+    & span {
+        margin: 0;
+        padding: 0;
+        font-family: $WorkSans;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 18px;
+        letter-spacing: 0px;
+        text-align: right;
+    }
+    & p {
+        margin: 0;
+        padding: 0;
+        font-family: $WorkSans;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 14px;
+        letter-spacing: 0em;
+        text-align: right;
+    }
+
+    @media screen and(min-width:768px) {
+        display: flex;
+    }
+}

@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>DEXSPORT</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__leftElements">
+            <img class="logo" src="img/Logo.png" alt="Logo">
+            <nav class="header__leftElements--nav">
+                <a href="#"><span class="nav--pool">  Pool             </span></a>
+                <a href="#"><span class="nav--sports">Sports           </span></a>
+                <a href="#"><span class="nav--crypto">Crypto           </span></a>
+                <a href="#"><span class="nav--market">Prediction market</span></a>
+                <a href="#"><span class="nav--nft">   NFT              </span></a>
+            </nav>
+        </div>
+        <div class="header__rightElements">
+            <div class="myBets">
+                <span>10,458.00 BUSD</span>
+            </div>
+            <div class="account_info">
+                <span>Connected</span>
+                <p>0xF9Bf...E712</p>
+            </div>
+            <img src="img/iconNotice.svg" alt="iconNotice">
+            <div class="burger_btn" id="burger" onclick="openBurger()">
+                <span class="qw"></span>
+            </div>
+            <nav class="nav">
+                    <a href="#"><span class="nav--myBets">My Bets          </span></a>
+                    <a href="#"><span class="nav--pool">  Pool             </span></a>
+                    <a href="#"><span class="nav--sports">Sports           </span></a>
+                    <a href="#"><span class="nav--crypto">Crypto           </span></a>
+                    <a href="#"><span class="nav--market">Prediction market</span></a>
+                    <a href="#"><span class="nav--nft">   NFT              </span></a>
+                <button><div>Connect wallet</div></button>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <div class="btns">
+            <button class="btnActive">
+                <span>Total</span>
+            </button>
+            <button class="btns__btn">  
+                <img src="img/BTC_logo.svg" alt="">
+                <span>BTC</span>
+            </button>
+            <button class="btns__btn">
+                <img src="img/ETH_logo.svg" alt="">
+                <span>ETH</span>
+            </button>
+            <button class="btns__btn">
+                <img src="img/USDT_logo.svg" alt="">
+                <span>USDT</span>
+            </button>
+            <button class="btns__btn">
+                <img src="img/XRP_logo.svg" alt="">
+                <span>XRP</span>
+            </button>
+            <button class="btns__btn">
+                <img src="img/DOT_logo.svg" alt="">
+                <span>DOT</span>
+            </button>
+            <button class="btns__btn">
+                <img src="img/UNI_logo.svg" alt="">
+                <span>UNI</span>
+            </button>
+        </div>
+        <div class="contentQ">
+            <div class="pool_info">
+                <h1 class="pool_info__title">
+                    Pool info
+                </h1>
+                <div class="pool_info__content">
+                    <div class="content__textBlock">
+                        <div class="content__textBlock--first">
+                            <p>
+                                Total pool
+                            </p>
+                            <span>
+                                10,458.00 BUSD
+                            </span>
+                            <div>
+                                <p>$10,458.00</p>
+                                <p>+4.29%</p>
+                            </div>
+                        </div>
+                        <div class="content__textBlock--second">
+                            <p>
+                                Bets placed
+                            </p>
+                            <div>
+                                <p>$23 Bets</p>
+                                <p>+1 Bet</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="chart"></canvas>
+                        <div class="chart-container__percent">+4.29%</div>
+                        <div class="chart-container__time">24h</div>
+                    </div>
+                </div>
+            </div>
+            <div class="pool_volume">
+                <h1 class="pool_volume__title">
+                    Pool Volume
+                </h1>
+                <canvas id="line-chart" width="600" height="270"></canvas>
+            </div>
+        </div>
+        <div class="table">
+            <div class="table__header">
+                <p>User address</p>
+                <p>Sport</p>
+                <p>Match</p>
+                <p>Bet</p>
+                <p>Date/Time</p>
+            </div>
+            <div class="table__row">
+                <div class="table__row--userAddress">
+                    0хВ0F...ER23 🗿
+                </div>
+                <div class="table__row--sport">
+                    ⚽ Football
+                </div>
+                <div class="table__row--match">
+                    <div>
+                        <span>
+                            Athletic Bilbao
+                        </span> 
+                        <span>VS</span>
+                    </div>
+                    <div>
+                        Real Valladolid
+                    </div>
+                </div>
+                <div class="table__row--bet">
+                    <div><span>500</span> BUSD</div>
+                    <span>$500.00</span>
+                </div>
+                <div class="table__row--dataTime">
+                    <span>19:17:33</span>
+                    <span>06.06.21</span>
+                </div>
+            </div>
+            <div class="table__row">
+                <div class="table__row--userAddress">
+                    0хВ0F...ER23 🗿
+                </div>
+                <div class="table__row--sport">
+                    ⚽ Football
+                </div>
+                <div class="table__row--match">
+                    <div>
+                        <span>
+                            Athletic Bilbao
+                        </span> 
+                        <span>VS</span>
+                    </div>
+                    <div>
+                        Real Valladolid
+                    </div>
+                </div>
+                <div class="table__row--bet">
+                    <div><span>500</span> BUSD</div>
+                    <span>$500.00</span>
+                </div>
+                <div class="table__row--dataTime">
+                    <span>19:17:33</span>
+                    <span>06.06.21</span>
+                </div>
+            </div>
+            <div class="table__row">
+                <div class="table__row--userAddress">
+                    0хВ0F...ER23 🗿
+                </div>
+                <div class="table__row--sport">
+                    ⚽ Football
+                </div>
+                <div class="table__row--match">
+                    <div>
+                        <span>
+                            Athletic Bilbao
+                        </span> 
+                        <span>VS</span>
+                    </div>
+                    <div>
+                        Real Valladolid
+                    </div>
+                </div>
+                <div class="table__row--bet">
+                    <div><span>500</span> BUSD</div>
+                    <span>$500.00</span>
+                </div>
+                <div class="table__row--dataTime">
+                    <span>19:17:33</span>
+                    <span>06.06.21</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <nav class="footer__nav">
+            <a class="footer__nav--item" href="#">
+                <img src="img/icon-pool--nav.svg" alt="iconPool">
+                <span>Pool</span>
+            </a>
+            <a class="footer__nav--item" href="#">
+                <img src="img/icon-sports--nav.svg" alt="iconPool">
+                <span>Sports</span>
+            </a>
+            <a class="footer__nav--item" href="#">
+                <img src="img/icon-crypto--nav.svg" alt="iconPool">
+                <span>Crypto</span>
+            </a>
+            <a class="footer__nav--item" href="#">
+                <img src="img/icon-market--nav.svg" alt="iconPool">
+                <span>Prediction</span>
+            </a>
+            <a class="footer__nav--item" href="#">
+                <img src="img/icon-nft--nav.svg" alt="iconPool">
+                <span>NFT</span>
+            </a>
+        </nav>
+    </footer>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/line_chart.js"></script>
+<script src="js/newDonat.js"></script>
+<script src="js/burger.js"></script>
+</body>
+</html>

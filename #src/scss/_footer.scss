@@ -1,0 +1,44 @@
+﻿.footer {
+    background: #1F2025;
+    box-shadow: 0px -0.5px 0px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(20px);
+
+    padding: 3px 10px 38px 10px;
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        &--item {
+            text-decoration: none;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            width: 75px;
+            height: 49px;
+
+
+
+            & span {
+                font-family: Work Sans;
+                font-size: 10px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 14px;
+                letter-spacing: 0em;
+                text-align: center;
+    
+                color: $lightGray;
+            }
+            & img {
+                // Надо как-то менять цвет)
+            }
+        }
+    }
+
+    @media screen and (min-width:1440px) {
+        display: none;
+    }
+}

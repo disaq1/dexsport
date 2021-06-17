@@ -1,0 +1,1235 @@
+@font-face {
+  font-family: "WorkSans";
+  font-display: swap;
+  src: url("../fonts/WorkSans-Medium.2d4b10fb.woff") format("woff"), url("../fonts/WorkSans-Medium.2d4b10fb.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+a:focus,
+button:focus,
+input:focus {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "WorkSans", sans-serif;
+  color: white;
+  background: black;
+}
+
+.header {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 13px 10px;
+  background: -webkit-gradient(linear, right top, left top, from(#3c43df), to(#6112b0));
+  background: -o-linear-gradient(right, #3c43df, #6112b0);
+  background: linear-gradient(to left, #3c43df, #6112b0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.header__leftElements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__leftElements--nav {
+  display: none;
+}
+
+.header__leftElements--nav a {
+  text-decoration: none;
+  font-family: "WorkSans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: right;
+  color: white;
+  margin: 0;
+  padding: 16px 23px 16px 43px;
+}
+
+.header__leftElements--nav a span {
+  padding-top: 2px;
+}
+
+.header__leftElements--nav a:hover {
+  background: #6B32C0;
+}
+
+.header__rightElements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo {
+  margin: 13px 42px 13px 0;
+}
+
+.myBets {
+  position: relative;
+  background: black;
+  margin-right: 63px;
+  padding: 9px 112px 7px 35px;
+  border-radius: 8px;
+  display: none;
+}
+
+.myBets span:nth-child(1) {
+  position: relative;
+  font-family: "WorkSans", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.myBets span:nth-child(1)::after {
+  position: absolute;
+  top: 50%;
+  left: -18px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  content: url(../img/wallet.svg);
+}
+
+.myBets::before {
+  position: absolute;
+  top: 50%;
+  right: -8px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  content: 'My Bets';
+  font-family: "WorkSans", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0px;
+  text-align: left;
+  padding: 8px 19px 8px 39px;
+  color: black;
+  background: white;
+  border-radius: 8px;
+}
+
+.myBets::after {
+  position: absolute;
+  top: 50%;
+  right: 67px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  content: url(../img/tiket.svg);
+}
+
+.account_info {
+  position: relative;
+  background: black;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  border-radius: 8px;
+  padding: 1px 26px 1px 12px;
+  margin-right: 47px;
+}
+
+.account_info::after {
+  position: absolute;
+  top: 50%;
+  left: 80px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  content: url(../img/Avatar_account.svg);
+  padding: 5px;
+  background: white;
+  -webkit-box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+}
+
+.account_info span {
+  margin: 0;
+  padding: 0;
+  font-family: "WorkSans", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0px;
+  text-align: right;
+}
+
+.account_info p {
+  margin: 0;
+  padding: 0;
+  font-family: "WorkSans", sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-align: right;
+}
+
+.burger_btn {
+  margin-left: 19px;
+  position: relative;
+  width: 18px;
+  height: 14px;
+  border: 1px solid transparent;
+}
+
+.burger_btn span {
+  -webkit-transition: 0.8s;
+  -o-transition: 0.8s;
+  transition: 0.8s;
+  content: '';
+  position: absolute;
+  top: 6px;
+  right: 0;
+  width: 18px;
+  height: 2px;
+  background: white;
+  border-radius: 50px;
+  opacity: 1;
+}
+
+.burger_btn::after {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: '';
+  width: 18px;
+  height: 2px;
+  background: white;
+  border-radius: 50px;
+}
+
+.burger_btn::before {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  content: '';
+  width: 18px;
+  height: 2px;
+  background: white;
+  border-radius: 50px;
+}
+
+.burger_btn:hover {
+  cursor: pointer;
+}
+
+.active .qw {
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  opacity: 0;
+}
+
+.active::before {
+  width: 18.38px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 50%;
+}
+
+.active::after {
+  width: 18.38px;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 50%;
+}
+
+.active ~ .nav {
+  opacity: 1;
+  -webkit-transform: translateY(15px) !important;
+      -ms-transform: translateY(15px) !important;
+          transform: translateY(15px) !important;
+}
+
+.nav {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  background: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  width: 100%;
+  height: 100vh;
+  padding: 50px 0 30px;
+  opacity: 0;
+  z-index: 1;
+  -webkit-transform: translateY(-900px);
+      -ms-transform: translateY(-900px);
+          transform: translateY(-900px);
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+
+.nav a {
+  position: relative;
+  text-decoration: none;
+  font-family: "WorkSans", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: white;
+  width: 100%;
+  padding: 10px 0 10px 39px;
+  border-bottom: 1px solid #38393E;
+}
+
+.nav a::after {
+  position: absolute;
+  top: 50%;
+  right: 42px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  content: url(../img/arrowRight.svg);
+  width: 24px;
+}
+
+.nav a:first-child {
+  padding: 10px 0 10px 48px;
+}
+
+.nav a:first-child::after {
+  right: 53px;
+}
+
+.nav a:last-child {
+  border: none;
+}
+
+.nav button {
+  margin: 60px auto;
+  padding: 13px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: -webkit-gradient(linear, right top, left top, from(#3C43DF), to(#6112B0));
+  background: -o-linear-gradient(right, #3C43DF 0%, #6112B0 100%);
+  background: linear-gradient(270deg, #3C43DF 0%, #6112B0 100%);
+  border-radius: 12px;
+  font-family: "WorkSans", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+}
+
+.nav button div {
+  position: relative;
+}
+
+.nav button div::before {
+  position: absolute;
+  content: url(../img/walletBtn.svg);
+  top: 0;
+  left: -20px;
+  width: 16px;
+  height: 16px;
+}
+
+.nav--myBets {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav--myBets::after {
+  right: 51px !important;
+}
+
+.nav--myBets::before {
+  position: absolute;
+  content: url(../img/icon-MyBets--nav.svg);
+  padding: 8px;
+  background: white;
+  border-radius: 50%;
+  top: -8px;
+  left: -39px;
+  width: 20px;
+  height: 20px;
+}
+
+.nav--pool {
+  position: relative;
+}
+
+.nav--pool::before {
+  position: absolute;
+  content: url(../img/icon-pool--nav.svg);
+  top: 0;
+  left: -28px;
+  width: 20px;
+  height: 20px;
+}
+
+.nav--sports {
+  position: relative;
+}
+
+.nav--sports::before {
+  position: absolute;
+  content: url(../img/icon-sports--nav.svg);
+  top: 0;
+  left: -28px;
+  width: 20px;
+  height: 20px;
+}
+
+.nav--crypto {
+  position: relative;
+}
+
+.nav--crypto::before {
+  position: absolute;
+  content: url(../img/icon-crypto--nav.svg);
+  top: 0;
+  left: -28px;
+  width: 20px;
+  height: 20px;
+}
+
+.nav--market {
+  position: relative;
+}
+
+.nav--market::before {
+  position: absolute;
+  content: url(../img/icon-market--nav.svg);
+  top: 0;
+  left: -28px;
+  width: 20px;
+  height: 20px;
+}
+
+.nav--nft {
+  position: relative;
+}
+
+.nav--nft::before {
+  position: absolute;
+  content: url(../img/icon-nft--nav.svg);
+  top: 0;
+  left: -28px;
+  width: 20px;
+  height: 20px;
+}
+
+main {
+  max-width: 1200px;
+}
+
+.main {
+  margin: 40px auto 80px;
+  padding: 10px;
+}
+
+.contentQ {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 0 62px 0;
+}
+
+.btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  position: relative;
+}
+
+.btns__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 10px;
+  padding: 0 10px 2px;
+}
+
+.btns__btn span {
+  margin-left: 6px;
+}
+
+.btns button {
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #999999;
+  background: none;
+  border: none;
+  font-family: "WorkSans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: center;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.btns button:hover {
+  color: white !important;
+  position: relative;
+}
+
+.btns button:hover span::before {
+  position: absolute;
+  content: '';
+  bottom: -10px;
+  left: 0%;
+  background: -webkit-gradient(linear, left top, right top, from(#763690), to(#5b1bba));
+  background: -o-linear-gradient(left, #763690, #5b1bba);
+  background: linear-gradient(to right, #763690, #5b1bba);
+  width: 100%;
+  height: 4px;
+  border-radius: 50px;
+}
+
+.btns button:first-child {
+  margin-left: 0;
+}
+
+.btns::before {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #38393E;
+  border-radius: 50px;
+}
+
+.btnActive {
+  color: white !important;
+  position: relative;
+}
+
+.btnActive span::before {
+  position: absolute;
+  content: '';
+  bottom: -10px;
+  left: 0%;
+  background: -webkit-gradient(linear, left top, right top, from(#763690), to(#5b1bba));
+  background: -o-linear-gradient(left, #763690, #5b1bba);
+  background: linear-gradient(to right, #763690, #5b1bba);
+  width: 100%;
+  height: 4px;
+  border-radius: 50px;
+}
+
+.pool_info {
+  margin: 30px 0;
+  max-width: 760px;
+}
+
+.pool_info__title {
+  margin: 0 0 20px 0;
+  font-family: "WorkSans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.pool_info__content {
+  background: #1F2025;
+  border: 0.5475px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px 0 20px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content__textBlock--first {
+  margin-bottom: 32px;
+}
+
+.content__textBlock--first p {
+  font-family: "WorkSans", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin: 0 0 4px 0;
+  padding: 0;
+}
+
+.content__textBlock--first span {
+  font-family: "WorkSans", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.content__textBlock--first div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "WorkSans", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.content__textBlock--first div p:first-child {
+  margin-right: 12px;
+  font-family: "WorkSans", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.content__textBlock--first div p:last-child {
+  font-family: "WorkSans", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding: 1px 4px;
+  color: #1CC760;
+  background: rgba(28, 199, 96, 0.1);
+  border-radius: 4px;
+}
+
+.content__textBlock--second p {
+  margin-bottom: 4px;
+  padding: 0;
+  font-family: "WorkSans", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.content__textBlock--second div {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content__textBlock--second div p:first-child {
+  margin: 0;
+  padding: 0;
+  font-family: "WorkSans", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin-right: 13px;
+}
+
+.content__textBlock--second div p:last-child {
+  margin: 0;
+  padding: 0;
+  font-family: "WorkSans", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding: 1px 4px;
+  color: #1CC760;
+  background: rgba(28, 199, 96, 0.1);
+  border-radius: 4px;
+}
+
+.chart-container {
+  position: relative;
+  height: 191px;
+  width: 191px;
+  margin: 45px auto;
+}
+
+.chart-container__percent {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-family: "WorkSans", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: 0px;
+  text-align: right;
+}
+
+.chart-container__time {
+  position: absolute;
+  top: 105px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-family: "WorkSans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0px;
+  text-align: right;
+}
+
+.pool_volume {
+  max-width: 760px;
+}
+
+.pool_volume__title {
+  margin: 0 0 20px 0;
+  font-family: "WorkSans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.table {
+  max-width: 1200px;
+  width: 100%;
+  min-width: 1144px;
+  margin: 0 0 26px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.table__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #38393E;
+  margin: 0 0 20px;
+  padding: 0 47px 16px;
+}
+
+.table__header p {
+  font-family: "WorkSans", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding: 0;
+  color: #999999;
+}
+
+.table__header p:nth-child(1) {
+  margin: 0 149px 0 0;
+}
+
+.table__header p:nth-child(2) {
+  margin: 0 150px 0 0;
+}
+
+.table__header p:nth-child(3) {
+  margin: 0 297px 0 0;
+}
+
+.table__header p:nth-child(4) {
+  margin: 0 207px 0 0;
+}
+
+.table__header p:nth-child(5) {
+  margin: 0;
+}
+
+.table__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #1F2025;
+  border: 0.5475px solid rgba(255, 255, 255, 0.08);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 2.19px 8.2125px rgba(0, 0, 0, 0.15), 0px 3.285px 21.9px rgba(0, 0, 0, 0.1), 0px 10.95px 43.8px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 2.19px 8.2125px rgba(0, 0, 0, 0.15), 0px 3.285px 21.9px rgba(0, 0, 0, 0.1), 0px 10.95px 43.8px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  margin: 0 0 10px;
+  padding: 12px 47px;
+}
+
+.table__row--userAddress {
+  font-family: "WorkSans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0 72px 0 0;
+  padding: 7px 7px 7px 39px;
+  background: -webkit-gradient(linear, right top, left top, from(#202020), color-stop(103.46%, #000000));
+  background: -o-linear-gradient(right, #202020 0%, #000000 103.46%);
+  background: linear-gradient(270deg, #202020 0%, #000000 103.46%);
+  border-radius: 18px;
+  position: relative;
+}
+
+.table__row--userAddress::before {
+  position: absolute;
+  top: 50%;
+  left: 7px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  content: url(../img/avatar.svg);
+}
+
+.table__row--sport {
+  font-family: "WorkSans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0 95px 0 0;
+}
+
+.table__row--match {
+  margin: 0 173px 0 0;
+}
+
+.table__row--match div span:nth-child(1) {
+  padding-left: 30px;
+  position: relative;
+  font-family: "WorkSans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.table__row--match div span:nth-child(1)::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  width: 20px;
+  content: url(../img/athleticLogo.svg);
+}
+
+.table__row--match div span:nth-child(2) {
+  font-family: "WorkSans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.table__row--match div:nth-child(2) {
+  padding-left: 30px;
+  position: relative;
+  font-family: "WorkSans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.table__row--match div:nth-child(2)::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  width: 20px;
+  content: url(../img/realLogo.svg);
+}
+
+.table__row--bet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 135px 0 0;
+}
+
+.table__row--bet div {
+  position: relative;
+  font-family: "WorkSans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  padding: 0 0 0 26px;
+}
+
+.table__row--bet div::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: url(../img/coinLogo.svg);
+}
+
+.table__row--bet span:nth-child(1) {
+  font-family: "WorkSans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.table__row--dataTime {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.table__row--dataTime span:nth-child(1) {
+  font-family: "WorkSans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.table__row--dataTime span:nth-child(2) {
+  font-family: "WorkSans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.footer {
+  background: #1F2025;
+  -webkit-box-shadow: 0px -0.5px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px -0.5px 0px rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  padding: 3px 10px 38px 10px;
+}
+
+.footer__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__nav--item {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 75px;
+  height: 49px;
+}
+
+.footer__nav--item span {
+  font-family: Work Sans;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #999999;
+}
+
+@media screen and (min-width: 600px) {
+  .pool_info__content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .chart-container {
+    margin: 0 auto;
+    margin-right: 120px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 0 30px;
+  }
+
+  .logo {
+    margin: 18px 42px 18px 0;
+  }
+
+  .myBets {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .account_info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .burger_btn {
+    display: none;
+  }
+
+  .main {
+    padding: 30px;
+  }
+
+  .content__textBlock--first p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .content__textBlock--first span {
+    font-size: 30px;
+    line-height: 42px;
+  }
+
+  .content__textBlock--first div p:first-child {
+    font-size: 22px;
+    line-height: 31px;
+  }
+
+  .content__textBlock--first div p:last-child {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .content__textBlock--second p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .content__textBlock--second div p:first-child {
+    font-size: 30px;
+    line-height: 42px;
+  }
+
+  .content__textBlock--second div p:last-child {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .chart-container {
+    margin: auto;
+  }
+
+  .chart-container__percent {
+    font-size: 26px;
+    line-height: 22px;
+  }
+
+  .chart-container__time {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .table__header {
+    margin: 0 0 26px;
+  }
+
+  .table__row {
+    margin: 0 0 14px;
+  }
+}
+
+@media screen and (min-width: 1220px) {
+  .contentQ {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .pool_info {
+    margin: 30px 60px 30px 0;
+    width: 570px;
+  }
+
+  .pool_volume {
+    margin: 30px 0;
+    width: 570px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .header__leftElements--nav {
+    display: block;
+  }
+
+  .footer {
+    display: none;
+  }
+}

@@ -1,0 +1,250 @@
+﻿.pool_info {
+    margin: 30px 0;
+    max-width: 760px;
+
+    &__title {
+        margin: 0 0 20px 0;
+
+        font-family: $WorkSans;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 22px;
+        letter-spacing: 0px;
+        text-align: left;
+    }
+    &__content {
+        background: #1F2025;
+        border: 0.5475px solid rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+        box-sizing: border-box;
+        padding: 20px 0 20px 20px;
+
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (min-width:600px) {
+            flex-direction: row;
+        }
+    }
+
+    @media screen and (min-width:1220px) {
+        margin: 30px 60px 30px 0;
+        width: 570px;
+    }
+}
+
+.content__textBlock {
+
+    &--first {
+        margin-bottom: 32px;
+        & p {
+            font-family: $WorkSans;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 18px;
+            letter-spacing: 0em;
+            text-align: left;
+
+            margin: 0 0 4px 0;
+            padding: 0;
+
+            @media screen and (min-width:768px) {
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+        & span {
+            font-family: $WorkSans;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 34px;
+            letter-spacing: 0px;
+            text-align: left;
+
+            margin: 0;
+            padding: 0;
+
+            @media screen and (min-width:768px) {
+            font-size: 30px;
+            line-height: 42px;
+            }
+        }
+        & div {
+            display: flex;
+            align-items: center;
+
+            font-family: $WorkSans;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 18px;
+            letter-spacing: 0em;
+            text-align: left;
+
+            margin: 0;
+            padding: 0;
+
+            & p:first-child {
+                margin-right: 12px;
+                font-family: $WorkSans;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 18px;
+                letter-spacing: 0em;
+                text-align: left;
+
+                @media screen and (min-width:768px) {
+                    font-size: 22px;
+                    line-height: 31px;
+                }
+            }
+            & p:last-child {
+                font-family: $WorkSans;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 18px;
+                letter-spacing: 0em;
+                text-align: left;
+
+                padding: 1px 4px;
+
+                color: $green;
+                background: rgba($color: $green, $alpha: 0.1);
+                border-radius: 4px;
+
+                @media screen and (min-width:768px) {
+                    font-size: 16px;
+                    line-height: 18px;
+                }
+            }
+        }
+    }
+    &--second {
+        & p {
+            margin-bottom: 4px;
+            padding: 0;
+
+            font-family: $WorkSans;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 20px;
+            letter-spacing: 0px;
+            text-align: left;
+
+            @media screen and (min-width:768px) {
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+        & div {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            & p:first-child {
+                margin: 0;
+                padding: 0;
+
+                font-family: $WorkSans;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 34px;
+                letter-spacing: 0px;
+                text-align: left;
+
+                margin-right: 13px;
+
+                @media screen and (min-width:768px) {
+                    font-size: 30px;
+                    line-height: 42px;
+                }
+            }
+            & p:last-child {
+                margin: 0;
+                padding: 0;
+
+                font-family: $WorkSans;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 18px;
+                letter-spacing: 0em;
+                text-align: left;
+
+                padding: 1px 4px;
+
+                color: $green;
+                background: rgba($color: $green, $alpha: 0.1);
+                border-radius: 4px;
+
+                @media screen and (min-width:768px) {
+                    font-size: 16px;
+                    line-height: 18px;
+                }
+            }
+        }
+    }
+}
+
+// Стили для кольцевой диаграммы
+
+.chart-container {
+    position: relative;
+    height: 191px;
+    width: 191px;
+    margin: 45px auto;
+
+    @media screen and (min-width:600px) {
+        margin: 0 auto;
+        margin-right: 120px;
+    }
+    @media screen and (min-width:768px) {
+        margin: auto;
+    }
+
+    &__percent {
+        position: absolute;
+        top: 70px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        font-family: $WorkSans;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 34px;
+        letter-spacing: 0px;
+        text-align: right;
+
+        @media screen and (min-width:768px) {
+            font-size: 26px;
+            line-height: 22px;
+        }
+    }
+    &__time {
+        position: absolute;
+        top: 105px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        font-family: $WorkSans;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 22px;
+        letter-spacing: 0px;
+        text-align: right;
+
+        @media screen and (min-width:768px) {
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+}

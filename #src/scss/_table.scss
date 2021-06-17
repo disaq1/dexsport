@@ -1,0 +1,198 @@
+﻿.table {
+    max-width: 1200px;
+    width: 100%;
+    min-width: 1144px;
+    margin: 0 0 26px;
+    box-sizing: border-box;
+    &__header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        border-bottom: 1px solid $borderGray;
+
+        margin: 0 0 20px;
+        padding: 0 47px 16px;
+
+        @media screen and (min-width:768px) {
+            margin: 0 0 26px;
+        }
+
+        & p {
+            font-family: $WorkSans;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 18px;
+            letter-spacing: 0em;
+            text-align: left;
+
+            padding: 0;
+            
+            color: $gray;
+        }
+
+
+        & p:nth-child(1) {
+            margin: 0 149px 0 0;
+        }
+        & p:nth-child(2) {
+            margin: 0 150px 0 0;
+        }
+        & p:nth-child(3) {
+            margin: 0 297px 0 0;
+        }
+        & p:nth-child(4) {
+            margin: 0 207px 0 0;
+        }
+        & p:nth-child(5) {
+            margin: 0;
+        }
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #1F2025;
+        border: 0.5475px solid rgba(255, 255, 255, 0.08);
+        box-sizing: border-box;
+        box-shadow: 0px 2.19px 8.2125px rgba(0, 0, 0, 0.15), 0px 3.285px 21.9px rgba(0, 0, 0, 0.1), 0px 10.95px 43.8px rgba(0, 0, 0, 0.25);
+        border-radius: 12px;
+
+        margin: 0 0 10px;
+        padding: 12px 47px;
+
+        @media screen and (min-width:768px) {
+            margin: 0 0 14px;
+        }
+
+        &--userAddress {
+            font-family: $WorkSans;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+
+            margin: 0 72px 0 0;
+            padding: 7px 7px 7px 39px;
+
+            background: linear-gradient(270deg, #202020 0%, #000000 103.46%);
+            border-radius: 18px;
+
+            position: relative;
+            &::before {
+                position: absolute;
+                top: 50%;
+                left: 7px;
+                transform: translateY(-50%);
+                content: url(../img/avatar.svg);
+
+            }
+        }
+        &--sport {
+            font-family: $WorkSans;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+
+            margin: 0 95px 0 0;
+        }
+        &--match {
+            margin: 0 173px 0 0;
+            & div {
+                & span:nth-child(1) {
+                    padding-left: 30px;
+                    position: relative;
+                    font-family: $WorkSans;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 22px;
+                    &::before {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        padding: 0;
+                        width: 20px;
+                        content: url(../img/athleticLogo.svg);
+                    }
+                }
+                & span:nth-child(2) {
+                    font-family: $WorkSans;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+            }
+            & div:nth-child(2) {
+                padding-left: 30px;
+                position: relative;
+                font-family: $WorkSans;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 22px;
+                &::before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    padding: 0;
+                    width: 20px;
+                    content: url(../img/realLogo.svg);
+                }
+            }
+        }
+        &--bet {
+            display: flex;
+            flex-direction: column;
+            
+            margin: 0 135px 0 0;
+            
+            & div {
+                position: relative;
+                font-family: $WorkSans;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 22px;
+
+                padding: 0 0 0 26px;
+                &::before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    content: url(../img/coinLogo.svg);
+                }
+            }
+            & span:nth-child(1) {
+                font-family: $WorkSans;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+        &--dataTime {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            & span:nth-child(1) {
+                font-family: $WorkSans;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 22px;
+            }
+            & span:nth-child(2) {
+                font-family: $WorkSans;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+    }
+}

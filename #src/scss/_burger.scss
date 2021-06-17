@@ -1,0 +1,73 @@
+﻿.burger_btn {
+    margin-left: 19px;
+    position: relative;
+    width: 18px;
+    height: 14px;
+    border: 1px solid transparent;
+
+    @media screen and (min-width:768px) {
+        display: none;
+    }
+
+    & span {
+        transition: 0.8s;
+        content: '';
+        position: absolute;
+        top: 6px;
+        right: 0;
+        width: 18px;
+        height: 2px;
+        background: white;
+        border-radius: 50px;
+
+        opacity: 1;
+    }
+    &::after {
+        transition: 0.3s;
+        position: absolute;
+        top: 0;
+        right: 0;
+        content: '';
+        width: 18px;
+        height: 2px;
+        background: white;
+        border-radius: 50px;
+    }
+    &::before {
+        transition: 0.3s;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        content: '';
+        width: 18px;
+        height: 2px;
+        background: white;
+        border-radius: 50px;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.active {
+
+    .qw {
+        transition: 0.2s;
+        opacity: 0;
+    }
+    &::before {
+        width: 18.38px;
+        transform: rotate(45deg);
+        top: 50%;
+    }
+    &::after {
+        width: 18.38px;
+        transform: rotate(-45deg);
+        top: 50%;
+    }
+}
+
+.active ~ .nav {
+    opacity: 1;
+    transform: translateY(15px) !important;
+}
