@@ -1226,7 +1226,9 @@ main {
 
 @media screen and (min-width: 1440px) {
   .header__leftElements--nav {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 
   .footer {
