@@ -13,8 +13,8 @@
     padding: 50px 0 30px;
 
     opacity: 0;
-    z-index: 1;
-    transform: translateY(-900px);
+    z-index: 1000;
+    transform: translateY(-1900px);
     transition: 1s;
 
     & a {
