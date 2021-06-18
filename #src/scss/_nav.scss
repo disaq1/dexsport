@@ -21,6 +21,10 @@
         position: relative;
         text-decoration: none;
 
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+
         font-family: $WorkSans;
         font-size: 18px;
         font-style: normal;
@@ -32,22 +36,22 @@
         color: white;
         width: 100%;
 
-        padding: 10px 0 10px 39px;
+        padding: 10px 10px 10px 0;
         border-bottom: 1px solid $borderGray;
 
+        &:first-child span {
+            margin: 0 0 0 48px;
+        }
+        & span {
+            margin: 0 0 0 39px;
+        }
         &::after {
             position: absolute;
             top: 50%;
-            right: 42px;
+            right: 5px;
             transform: translateY(-50%);
             content: url(../img/arrowRight.svg);
             width: 24px;
-        }
-    }
-    & a:first-child {
-        padding: 10px 0 10px 48px;
-        &::after {
-            right: 53px;
         }
     }
     & a:last-child {
