@@ -1,0 +1,184 @@
+﻿.Address {
+    
+    &__id1 {
+        background: linear-gradient(270deg, #202020 0%, #000000 103.46%);
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 7px;
+            transform: translateY(-50%);
+            content: url(../img/avatar.svg);
+            background: white;
+            padding: 1px;
+            border-radius: 50%;
+        }
+    }
+    &__id2 {
+        background: linear-gradient(269.03deg, #4AD681 5.56%, #28CD39 101.33%);
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 7px;
+            transform: translateY(-50%);
+            content: url(../img/avatarRed.svg);
+            background: white;
+            padding: 1px;
+            border-radius: 50%;
+        }
+    }
+    &__id3 {
+        background: linear-gradient(270.29deg, #EE882A 2.44%, #D34E24 99.8%);
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 7px;
+            transform: translateY(-50%);
+            content: url(../img/avatarBlue.svg);
+            background: white;
+            padding: 1px;
+            border-radius: 50%;
+        }
+    }
+}
+
+.match {
+
+    &__id1 {
+        & div {
+            & span:nth-child(1) {
+                padding-left: 30px;
+                position: relative;
+                font-family: $WorkSans;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 22px;
+                &::before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    padding: 0;
+                    width: 20px;
+                    content: url(../img/athleticLogo.svg);
+                }
+            }
+            & span:nth-child(2) {
+                font-family: $WorkSans;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+        & div:nth-child(2) {
+            padding-left: 30px;
+            position: relative;
+            font-family: $WorkSans;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            margin-top: 6px;
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 0;
+                width: 20px;
+                content: url(../img/realLogo.svg);
+            }
+        }
+    }
+    &__id2 {
+        & div {
+            & span:nth-child(1) {
+                padding-left: 30px;
+                position: relative;
+                font-family: $WorkSans;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 22px;
+                &::before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    padding: 0;
+                    width: 20px;
+                    content: url(../img/athleticLogo.svg);
+                }
+            }
+            & span:nth-child(2) {
+                font-family: $WorkSans;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+        & div:nth-child(2) {
+            padding-left: 30px;
+            position: relative;
+            font-family: $WorkSans;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            margin-top: 6px;
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 0;
+                width: 20px;
+                content: url(../img/realLogo.svg);
+            }
+        }
+    }
+    &__id3 {
+        & div {
+            & span:nth-child(1) {
+                padding-left: 30px;
+                position: relative;
+                font-family: $WorkSans;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 22px;
+                &::before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    padding: 0;
+                    width: 20px;
+                    content: url(../img/brooklin_netsLogo.svg);
+                }
+            }
+            & span:nth-child(2) {
+                font-family: $WorkSans;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+        & div:nth-child(2) {
+            padding-left: 30px;
+            position: relative;
+            font-family: $WorkSans;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            margin-top: 6px;
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 0;
+                width: 20px;
+                content: url(../img/milwaukee_buchsLogo.svg);
+            }
+        }
+    }
+}
