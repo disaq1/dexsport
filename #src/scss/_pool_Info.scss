@@ -195,6 +195,8 @@
 
 // Стили для кольцевой диаграммы
 
+canvas#chart{position:relative; z-index:1;}
+
 .chart-container {
     position: relative;
     height: 191px;
