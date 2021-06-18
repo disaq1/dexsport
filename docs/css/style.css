@@ -329,10 +329,10 @@ body {
   height: 100vh;
   padding: 50px 0 30px;
   opacity: 0;
-  z-index: 1;
-  -webkit-transform: translateY(-900px);
-      -ms-transform: translateY(-900px);
-          transform: translateY(-900px);
+  z-index: 1000;
+  -webkit-transform: translateY(-1900px);
+      -ms-transform: translateY(-1900px);
+          transform: translateY(-1900px);
   -webkit-transition: 1s;
   -o-transition: 1s;
   transition: 1s;
@@ -544,7 +544,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 10px;
+  margin: 0 14px;
   padding: 0 10px 2px;
 }
 
@@ -776,6 +776,11 @@ main {
   border-radius: 4px;
 }
 
+canvas#chart {
+  position: relative;
+  z-index: 1;
+}
+
 .chart-container {
   position: relative;
   height: 191px;
@@ -887,15 +892,16 @@ main {
 }
 
 .table__row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  grid-template-areas: "userAddress sport match bet dataTime";
+  grid-template-columns: 22.47% 17.82% 31.22% 23.09% 6.61%;
+  grid-gap: 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   background: #1F2025;
   border: 0.5475px solid rgba(255, 255, 255, 0.08);
   -webkit-box-sizing: border-box;
@@ -908,90 +914,33 @@ main {
 }
 
 .table__row--userAddress {
+  grid-area: userAddress;
   font-family: "WorkSans", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
-  margin: 0 72px 0 0;
+  width: 124px;
   padding: 7px 7px 7px 39px;
-  background: -webkit-gradient(linear, right top, left top, from(#202020), color-stop(103.46%, #000000));
-  background: -o-linear-gradient(right, #202020 0%, #000000 103.46%);
-  background: linear-gradient(270deg, #202020 0%, #000000 103.46%);
   border-radius: 18px;
   position: relative;
 }
 
-.table__row--userAddress::before {
-  position: absolute;
-  top: 50%;
-  left: 7px;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  content: url(../img/avatar.svg);
-}
-
 .table__row--sport {
+  grid-area: sport;
   font-family: "WorkSans", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
-  margin: 0 95px 0 0;
 }
 
 .table__row--match {
-  margin: 0 173px 0 0;
-}
-
-.table__row--match div span:nth-child(1) {
-  padding-left: 30px;
-  position: relative;
-  font-family: "WorkSans", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 22px;
-}
-
-.table__row--match div span:nth-child(1)::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 0;
-  width: 20px;
-  content: url(../img/athleticLogo.svg);
-}
-
-.table__row--match div span:nth-child(2) {
-  font-family: "WorkSans", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 22px;
-}
-
-.table__row--match div:nth-child(2) {
-  padding-left: 30px;
-  position: relative;
-  font-family: "WorkSans", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 22px;
-}
-
-.table__row--match div:nth-child(2)::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 0;
-  width: 20px;
-  content: url(../img/realLogo.svg);
+  grid-area: match;
 }
 
 .table__row--bet {
+  grid-area: bet;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -999,7 +948,6 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 0 135px 0 0;
 }
 
 .table__row--bet div {
@@ -1028,6 +976,7 @@ main {
 }
 
 .table__row--dataTime {
+  grid-area: dataTime;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1054,6 +1003,202 @@ main {
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
+}
+
+.Address__id1 {
+  background: -webkit-gradient(linear, right top, left top, from(#202020), color-stop(103.46%, #000000));
+  background: -o-linear-gradient(right, #202020 0%, #000000 103.46%);
+  background: linear-gradient(270deg, #202020 0%, #000000 103.46%);
+}
+
+.Address__id1::before {
+  position: absolute;
+  top: 50%;
+  left: 7px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  content: url(../img/avatar.svg);
+  background: white;
+  padding: 1px;
+  border-radius: 50%;
+}
+
+.Address__id2 {
+  background: -o-linear-gradient(180.97deg, #4AD681 5.56%, #28CD39 101.33%);
+  background: linear-gradient(269.03deg, #4AD681 5.56%, #28CD39 101.33%);
+}
+
+.Address__id2::before {
+  position: absolute;
+  top: 50%;
+  left: 7px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  content: url(../img/avatarRed.svg);
+  background: white;
+  padding: 1px;
+  border-radius: 50%;
+}
+
+.Address__id3 {
+  background: -o-linear-gradient(179.71deg, #EE882A 2.44%, #D34E24 99.8%);
+  background: linear-gradient(270.29deg, #EE882A 2.44%, #D34E24 99.8%);
+}
+
+.Address__id3::before {
+  position: absolute;
+  top: 50%;
+  left: 7px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  content: url(../img/avatarBlue.svg);
+  background: white;
+  padding: 1px;
+  border-radius: 50%;
+}
+
+.match__id1 div span:nth-child(1) {
+  padding-left: 30px;
+  position: relative;
+  font-family: "WorkSans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.match__id1 div span:nth-child(1)::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  width: 20px;
+  content: url(../img/athleticLogo.svg);
+}
+
+.match__id1 div span:nth-child(2) {
+  font-family: "WorkSans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.match__id1 div:nth-child(2) {
+  padding-left: 30px;
+  position: relative;
+  font-family: "WorkSans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  margin-top: 6px;
+}
+
+.match__id1 div:nth-child(2)::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  width: 20px;
+  content: url(../img/realLogo.svg);
+}
+
+.match__id2 div span:nth-child(1) {
+  padding-left: 30px;
+  position: relative;
+  font-family: "WorkSans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.match__id2 div span:nth-child(1)::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  width: 20px;
+  content: url(../img/athleticLogo.svg);
+}
+
+.match__id2 div span:nth-child(2) {
+  font-family: "WorkSans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.match__id2 div:nth-child(2) {
+  padding-left: 30px;
+  position: relative;
+  font-family: "WorkSans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  margin-top: 6px;
+}
+
+.match__id2 div:nth-child(2)::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  width: 20px;
+  content: url(../img/realLogo.svg);
+}
+
+.match__id3 div span:nth-child(1) {
+  padding-left: 30px;
+  position: relative;
+  font-family: "WorkSans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.match__id3 div span:nth-child(1)::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  width: 20px;
+  content: url(../img/brooklin_netsLogo.svg);
+}
+
+.match__id3 div span:nth-child(2) {
+  font-family: "WorkSans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.match__id3 div:nth-child(2) {
+  padding-left: 30px;
+  position: relative;
+  font-family: "WorkSans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  margin-top: 6px;
+}
+
+.match__id3 div:nth-child(2)::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  width: 20px;
+  content: url(../img/milwaukee_buchsLogo.svg);
 }
 
 .footer {

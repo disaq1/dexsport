@@ -8,7 +8,7 @@ new Chart(document.getElementById("line-chart"), {
             lineTension: 0.5, //Параметр, отвечающий за "плавность" линии (меньше значение = прямее линия)
             borderColor: "#5E5CE6",
             fill: false,
-            pointHitRadius: 15,
+            pointHitRadius: 45,
             pointBorderColor: 'transparent',
             pointBackgroundColor: 'transparent',
             pointHoverBorderColor: 'white',
@@ -34,8 +34,12 @@ new Chart(document.getElementById("line-chart"), {
                     size: '9.04px',
                     lineHeight: '16.27px'
                 },
-                bodyColor: 'white',
-                padding: 14,
+                padding: {
+                    left: 26,
+                    right: 26,
+                    top:14,
+                    bottom:14
+                },
                 boxWidth: 117,
                 boxHeight: 69,
                 displayColors: false
