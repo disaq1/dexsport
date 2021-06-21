@@ -40,6 +40,7 @@ body {
   font-family: "WorkSans", sans-serif;
   color: white;
   background: black;
+  min-width: 375px;
 }
 
 .header {
@@ -358,7 +359,7 @@ body {
   text-align: left;
   color: white;
   width: 100%;
-  padding: 10px 10px 10px 0;
+  padding: 20px 10px 20px 0;
   border-bottom: 1px solid #38393E;
 }
 
@@ -1457,6 +1458,20 @@ canvas#chart {
   }
 
   .footer {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 461px) {
+  .table__row--match {
+    display: none;
+  }
+
+  .table__row--bet {
+    display: none;
+  }
+
+  .table__row--dataTime {
     display: none;
   }
 }
